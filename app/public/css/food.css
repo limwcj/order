@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+.dialog-group-title {
+    color: #fff;
+    font-size: 1.2em;
+    margin-top: 60px;
+}
+
+.dialog-mygroup-title {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: '宋体';
+}
+
+.dialog-mygroup-title span:first-child{
+    text-decoration: underline;
+}
+
+.dialog-mygroup-title span:active {
+    color: red;
+}
+
+.dialog #foods {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    background: #4BD0FD;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.food-li {
+    position: relative;
+    background: #fff;
+    width: 90%;
+    height: 80px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #666;
+    font-family: '宋体';
+    font-size: 0.8em;
+    opacity: 0;
+}
+
+.food-li>div{
+    float: left;
+    width: 100%;
+}
+
+.food-li>div:first-child {
+    border-bottom: 1px dotted #e0e0e0;
+    height: 19px;
+    line-height: 19px;
+}
+
+.food-li>div:last-child {
+    height: 60px;
+    line-height: 60px;
+    font-size: 2em;
+    color: #000;
+    overflow: hidden;
+    font-family: '黑体';
+}
+
+.food-li>div:first-child span {
+    display: block;
+    width: 33.33%;
+    float: left;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.food-li-name input {
+    height: 37px;
+    font-size: 0.7em;
+    color: #666;
+    border: 1px solid #4BD0FD;
+    border-radius: 5px;
+    padding: 0 5px;
+    width: 70%;
+}
+
+.food-li>div:first-child input {
+    height: 15px;
+    color: #666;
+    border: 1px solid #4BD0FD;
+    border-radius: 3px;
+    padding: 1px 5px;
+    width: 90%;
+}
+
+.add-food {
+    position: relative;
+    background: #fff;
+    width: 90%;
+    height: 80px;
+    border-radius: 5px;
+    color: #666;
+    font-family: '宋体';
+    font-size: 0.8em;
+    display: none;
+    margin: 0 auto;
+    margin-top: 10px !important;
+}
+
+.add-food input {
+    width: 40%;
+    height: 20px;
+    border: 1px solid #4BD0FD;
+    border-radius: 3px;
+    color: #666;
+    font-family: '宋体';
+    font-size: 0.8em;
+    padding: 1px 5px;
+    margin-top: 10px;
+}
+
+.add-food div {
+    width: 90%;
+    background: red;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-family: '黑体';
+    font-size: 1em;
+    margin-top: 10px !important;
+}
+
+.add-food div:active {
+    background: darkred;
+}
