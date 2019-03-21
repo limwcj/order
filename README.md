@@ -4,6 +4,8 @@
 
 ## QuickStart
 
+```bash
 $ npm i
 $ npm run dev
-\$ open http://localhost:9999/public/index.html
+$ open http://localhost:9999/public/index.html
+```
