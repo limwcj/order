@@ -1,5 +1,5 @@
-'use strict';
-const path = require('path');
+"use strict";
+const path = require("path");
 
 module.exports = appInfo => {
   return {
@@ -7,13 +7,13 @@ module.exports = appInfo => {
       listen: {
         port: 9999,
         workers: 1
-      },
+      }
     },
-    keys: appInfo.name + '_1531993904510_7486',
+    keys: appInfo.name + "_test",
     logger: {
-      consoleLevel: 'INFO',
-      level: 'INFO',
-      dir: path.join(appInfo.baseDir, 'logs')
+      consoleLevel: "INFO",
+      level: "INFO",
+      dir: path.join(appInfo.baseDir, "logs")
     },
     logrotator: {
       maxDays: 3
@@ -21,25 +21,25 @@ module.exports = appInfo => {
     mysql: {
       clients: {
         order: {
-          database: 'lm_order',
+          database: "lm_order"
         },
         user: {
-          database: 'lm_user',
-        },
+          database: "lm_user"
+        }
       },
       default: {
-        host: '212.64.7.20',
-        port: '3306',
-        user: 'root',
-        password: '926425',
+        host: "localhost",
+        port: "3306",
+        user: "root",
+        password: "password",
         supportBigNumbers: true
       }
     },
     session: {
-      key: 'lm',
-      maxAge: 7 * 24 * 3600 * 1000,
+      key: "lm",
+      maxAge: 7 * 24 * 3600 * 1000
     },
-    middleware: ['checkLogin'],
+    middleware: ["checkLogin"],
     constants: {
       position: {
         MANAGER: 1,
@@ -47,27 +47,27 @@ module.exports = appInfo => {
       }
     },
     io: {
-      init: { },
+      init: {},
       namespace: {
-        '/': {
-          connectionMiddleware: ['auth'],
-          packetMiddleware: ['packet'],
-        },
+        "/": {
+          connectionMiddleware: ["auth"],
+          packetMiddleware: ["packet"]
+        }
       }
     },
     redis: {
       client: {
-        host: '212.64.7.20',
+        host: "localhost",
         port: 6379,
-        password: 'lim926425',
-        db: 0,
+        password: "password",
+        db: 0
       }
     },
     _io: {
       PREFIX_ONLINE: `order:online`,
       PREFIX_VOTE: `order:vote`,
-      OFFLINE_DELAY_TIME: 3000  //下线延时 毫秒s
+      OFFLINE_DELAY_TIME: 3000 //下线延时 毫秒s
     },
-    illegalWords: ['饭团', '匿名用户', '投票', '随机'],
+    illegalWords: ["饭团", "匿名用户", "投票", "随机"]
   };
 };
