@@ -9,7 +9,7 @@ CREATE TABLE `t_user` (
   `createdAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`userId`),
   UNIQUE KEY `t_user_username_IDX` (`username`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `t_eat_log` (
   `id` tinyint(4) NOT NULL AUTO_INCREMENT,
@@ -21,7 +21,7 @@ CREATE TABLE `t_eat_log` (
   `createdAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `t_eat_log_voteId_IDX` (`voteId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE `t_food` (
@@ -37,10 +37,10 @@ CREATE TABLE `t_food` (
 CREATE TABLE `t_group` (
   `groupId` tinyint(4) NOT NULL AUTO_INCREMENT,
   `groupName` varchar(100) NOT NULL,
-  `creator` tinyint(4) DEFAULT NULL,
+  `creator` varchar(100) DEFAULT NULL,
   `createDate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`groupId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `t_group_members` (
   `id` tinyint(4) NOT NULL AUTO_INCREMENT,
@@ -51,7 +51,7 @@ CREATE TABLE `t_group_members` (
   PRIMARY KEY (`id`),
   KEY `t_group_members_userId_IDX` (`userId`) USING BTREE,
   KEY `t_group_members_groupId_IDX` (`groupId`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 CREATE TABLE `t_vote_log` (
   `type` varchar(100) DEFAULT NULL,
@@ -63,5 +63,6 @@ CREATE TABLE `t_vote_log` (
   `newFoodId` tinyint(4) DEFAULT NULL,
   `order` tinyint(4) DEFAULT NULL,
   `anonymity` tinyint(1) DEFAULT '0',
-  `voteId` tinyint(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `voteId` tinyint(4) NOT NULL AUTO_INCREMENT,
+  KEY `t_vote_log_voteId_IDX` (`voteId`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8

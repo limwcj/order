@@ -9,7 +9,7 @@ class EatLogService extends Service {
   }
 
   async checkVoteEndLog(voteId) {
-    return await this.orderDb.get('t_eat_log', {voteId: voteId});
+    return await this.orderDb.get('t_eat_log', { voteId: voteId });
   }
 
   async addEatLog(params) {
