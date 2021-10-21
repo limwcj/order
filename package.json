@@ -5,19 +5,19 @@
   "private": true,
   "dependencies": {
     "crypto-js": "^3.1.9-1",
-    "egg": "^2.2.1",
+    "egg": "^2.30.0",
     "egg-mysql": "^3.0.0",
-    "egg-redis": "^2.0.0",
-    "egg-scripts": "^2.5.0",
-    "egg-socket.io": "^4.0.8"
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2.14.0",
+    "egg-socket.io": "^4.1.6"
   },
   "devDependencies": {
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
-    "egg-bin": "^4.3.5",
-    "egg-ci": "^1.8.0",
+    "egg-bin": "^4.16.4",
+    "egg-ci": "^1.18.0",
     "egg-mock": "^3.14.0",
-    "eslint": "^4.11.0",
+    "eslint": "^7.32.0",
     "eslint-config-egg": "^6.0.0",
     "webstorm-disable-index": "^1.2.0"
   },

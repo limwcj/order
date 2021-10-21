@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>饭团-首页</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="screen-orientation" content="portrait"/>
-    <meta name="browsermode" content="application">
-    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
-    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
-    <meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
-    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="browsermode" content="application" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-store, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+    <meta http-equiv="expires" content="0" />
     <meta name="ROBOTS" content="NOARCHIVE" />
-    <link href="./image/favicon.ico" rel="bookmark" type="image/x-icon">
-    <link href="./image/favicon.ico" rel="icon" type="image/x-icon">
-    <link href="./image/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="./css/index.css?v=201809052037">
-    <link rel="stylesheet" type="text/css" href="js/login/login.css?v=201809052037">
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="./image/favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="./image/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="./image/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css?v=201809052037" />
+    <link rel="stylesheet" type="text/css" href="js/login/login.css?v=201809052037" />
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome-4.7.0/css/font-awesome.min.css" />
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/html2canvas.min.js"></script>
     <script src="./js/lm.js?v=201809052037"></script>
     <script src="./js/socket.io.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="header">
-        <div id="header-title"><span>饭团</span></div>
+      <div id="header-title"><span>饭团</span></div>
     </div>
     <div id="container">
-        <div id="current-status">
-            <div id="current-status-user">尚未登录</div>
-            <div id="online">在线：<span>0</span></div>
-            <div id="current-vote-status">
-                <div>投票中<span></span>：</div>
-                <div></div>
-            </div>
-            <div id="quick-vote">
-                <div class="agree fa fa-check"></div>
-                <div class="against fa fa-remove"></div>
-                <div class="btn-anonymity"><span>匿名</span><span class="fa fa-question" ></span></div>
-            </div>
+      <div id="current-status">
+        <div id="current-status-user">尚未登录</div>
+        <div id="online">在线：<span>0</span></div>
+        <div id="current-vote-status">
+          <div>投票中<span></span>：</div>
+          <div></div>
         </div>
-        <div class="block left vote" data-href='vote.html'><span class="fa fa-1x fa-bar-chart">&nbsp;</span><span>投票</span></div>
-        <!--<div class="block right random"><span class="fa fa-1x fa-random">&nbsp;</span><span>随机</span></div>-->
-        <!--<div class="block left cold"><span class="fa fa-1x fa-eye">&nbsp;</span><span>冷门</span></div>-->
-        <div class="block right group" data-href='group.html'><span class="fa fa-1x fa-group">&nbsp;</span><span>饭团</span></div>
-        <div class="block left food" data-href='food.html'><span class="fa fa-1x fa-glass">&nbsp;</span><span>餐库</span></div>
-        <!--<div class="block right data"><span class="fa fa-1x fa-bar-chart">&nbsp;</span><span>数据</span></div>-->
-        <!--<div class="block left about"><span class="fa fa-1x fa-question">&nbsp;</span><span>关于</span></div>-->
-        <div class="block right" id="btn-login"><span class="fa fa-1x fa-sign-in">&nbsp;</span><span>登录</span></div>
-        <div class="block left"><span class="fa fa-1x fa-question">&nbsp;</span><span>更多</span></div>
-        <div class="block right"><span class="fa fa-1x fa-question">&nbsp;</span><span>功能</span></div>
-        <div class="block left"><span class="fa fa-1x fa-question">&nbsp;</span><span>敬请</span></div>
-        <div class="block right"><span class="fa fa-1x fa-question">&nbsp;</span><span>期待</span></div>
+        <div id="quick-vote">
+          <div class="agree fa fa-check"></div>
+          <div class="against fa fa-remove"></div>
+          <div class="btn-anonymity"><span>匿名</span><span class="fa fa-question"></span></div>
+        </div>
+      </div>
+      <div class="block left vote" data-href="vote.html">
+        <span class="fa fa-1x fa-bar-chart">&nbsp;</span><span>投票</span>
+      </div>
+      <!--<div class="block right random"><span class="fa fa-1x fa-random">&nbsp;</span><span>随机</span></div>-->
+      <!--<div class="block left cold"><span class="fa fa-1x fa-eye">&nbsp;</span><span>冷门</span></div>-->
+      <div class="block right group" data-href="group.html">
+        <span class="fa fa-1x fa-group">&nbsp;</span><span>饭团</span>
+      </div>
+      <div class="block left food" data-href="food.html">
+        <span class="fa fa-1x fa-glass">&nbsp;</span><span>餐库</span>
+      </div>
+      <!--<div class="block right data"><span class="fa fa-1x fa-bar-chart">&nbsp;</span><span>数据</span></div>-->
+      <!--<div class="block left about"><span class="fa fa-1x fa-question">&nbsp;</span><span>关于</span></div>-->
+      <div class="block right" id="btn-login"><span class="fa fa-1x fa-sign-in">&nbsp;</span><span>登录</span></div>
+      <div class="block left"><span class="fa fa-1x fa-question">&nbsp;</span><span>更多</span></div>
+      <div class="block right"><span class="fa fa-1x fa-question">&nbsp;</span><span>功能</span></div>
+      <div class="block left"><span class="fa fa-1x fa-question">&nbsp;</span><span>敬请</span></div>
+      <div class="block right"><span class="fa fa-1x fa-question">&nbsp;</span><span>期待</span></div>
     </div>
     <script src="js/login/login.js?v=201809052037"></script>
     <script src="./js/index.js?v=201809071138"></script>
-</body>
+  </body>
 </html>
