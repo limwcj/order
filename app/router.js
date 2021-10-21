@@ -1,9 +1,6 @@
 'use strict';
 
 module.exports = (app) => {
-  app.router.redirect('/', '/public/index.html', 302);
-  app.router.redirect('/vote.html', '/public/vote.html', 302);
-
   app.router.post('/api/user/checkUsername', app.controller.user.checkUsername);
   app.router.post('/api/user/register', app.controller.user.register);
   app.router.post('/api/user/login', app.controller.user.login);
@@ -20,6 +17,9 @@ module.exports = (app) => {
   app.router.post('/api/food/getFood', app.middleware.checkGroup(), app.controller.food.getFood);
   app.router.post('/api/food/updateFood', app.controller.food.updateFood);
   app.router.post('/api/food/addFood', app.middleware.checkGroup(), app.controller.food.addFood);
+
+  app.router.redirect('/', '/public/index.html', 302);
+  app.router.redirect('/vote.html', '/public/vote.html', 302);
 
   app.io.route('onlineCount', app.io.controller.room.onlineCount);
   app.io.route('vote', app.io.controller.vote.vote);
