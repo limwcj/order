@@ -33,7 +33,7 @@ class GroupService extends Service {
   }
 
   async addGroupMember(groupId, userId, position) {
-    return await this.orderDb.insert('t_group_members', { userId: userId, groupId: groupId, position: position || this.config.constants.position.MEMBER });
+    return await this.orderDb.insert('t_group_members', { userId: userId, groupId: groupId, position: position || this.config.constants.position.MANAGER });
   }
 
   async deleteGroupMember(groupId, userId) {
