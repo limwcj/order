@@ -38,6 +38,14 @@ class FoodController extends Controller {
       _params.creator = this.ctx.session.username;
       let result = await this.ctx.service.food.addFood(_params);
       this.ctx.body = {code: 0, message: 'success！', result: {foodId: result.insertId}};
+
+      try {
+        const randomFood = await this.ctx.service.food.getRandomFood(this.ctx.config.weCom.groupId);
+        const content = `${this.ctx.session.username} 添加了新菜品：${randomFood.foodName}`;
+        await this.ctx.service.weCom.sendText(content);
+      } catch (e) {
+        this.logger.error(e);
+      }
     } catch (e) {
       if (e.errno == 1062) return this.ctx.body = {code: -1, message: '店铺已存在！'};
       this.logger.error(e);
