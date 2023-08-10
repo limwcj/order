@@ -40,8 +40,7 @@ class FoodController extends Controller {
       this.ctx.body = {code: 0, message: 'success！', result: {foodId: result.insertId}};
 
       try {
-        const randomFood = await this.ctx.service.food.getRandomFood(this.ctx.config.weCom.groupId);
-        const content = `${this.ctx.session.username} 添加了新菜品：${randomFood.foodName}`;
+        const content = `${this.ctx.session.username} 添加了新菜品：${this.ctx.request.body.foodName}`;
         await this.ctx.service.weCom.sendText(content);
       } catch (e) {
         this.logger.error(e);
