@@ -20,6 +20,11 @@ class FoodService extends Service {
   async addFood(params) {
     return await this.orderDb.insert('t_food', params);
   }
+
+  async getRandomFood(groupId) {
+    const foods = await this.orderDb.select('t_food', { where: { groupId } });
+    return foods[Math.floor(Math.random() * foods.length)];
+  }
 }
 
 module.exports = FoodService;
