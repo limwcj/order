@@ -69,5 +69,9 @@ module.exports = (appInfo) => {
       OFFLINE_DELAY_TIME: 3000, //下线延时 毫秒s
     },
     illegalWords: ['饭团', '匿名用户', '投票', '随机'],
+    weCom: {
+      webhook: 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=a0e2ce6c-7d53-4fba-baa3-faa632ce447c',
+      groupId: 7,
+    },
   };
 };
